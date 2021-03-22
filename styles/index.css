@@ -1,0 +1,118 @@
+body h1.page-title {
+	text-align: center;
+	color: red;
+}
+
+body main {
+	width: 860px;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+body main div.mosaic-gallery {
+	width: 100%;
+	height: auto;
+	position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+    grid-gap: 15px;
+}
+
+body main div.mosaic-gallery > div.gallery-card-holder {
+	width: 200px;
+	box-sizing: border-box;
+    overflow: hidden;
+    position: absolute;
+}
+
+body main div.mosaic-gallery div.gallery-card-holder div.gallery-card-inner {
+	position: relative;
+	display: inline-block;
+	height: auto;
+	width: 100%;
+	overflow: hidden;
+    cursor: pointer;
+}
+
+body main div.mosaic-gallery div.gallery-card-holder div.gallery-card-inner div {
+	opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+body main div.mosaic-gallery div.gallery-card-holder div.gallery-card-inner div h1{
+    bottom: 0;
+    position: absolute;
+    margin: 0;
+}
+
+body main div.mosaic-gallery div.gallery-card-holder div.gallery-card-inner:hover div {
+	opacity: 0.5;
+}
+
+.black {
+	background-color: #000;
+	opacity: 0.5;
+}
+
+.black h1 {
+	color: #fff;
+}
+
+body main div.mosaic-gallery div.gallery-card-holder div.gallery-card-inner img {
+	max-width: 100%;
+	height: auto;
+	width: 200px;
+    vertical-align: middle;
+}
+
+
+body .modal{
+    position: absolute;
+    top: 0;
+    background-color: rgba(0,0,0,0.5);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x:hidden;
+    display: none;
+}
+
+body .modal-content-holder{
+    width: 650px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+    top: 25px;
+    border-radius: 5px;
+}
+
+body .modal-content-holder span.close{
+    position: absolute;
+    right: -15px;
+    top: -14px;
+    color: #000;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: #fff;
+    line-height: 1;
+    width: 30px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+body .modal-content-holder .modal-content img{
+    max-width: 100%;
+    height: auto;
+}
